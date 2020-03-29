@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/djmall.iml" filepath="$PROJECT_DIR$/djmall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/djmall_admin/djmall_admin.iml" filepath="$PROJECT_DIR$/djmall_admin/djmall_admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/djmall_api/djmall_api.iml" filepath="$PROJECT_DIR$/djmall_api/djmall_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/djmall_api/djmall_auth_api/djmall_auth_api.iml" filepath="$PROJECT_DIR$/djmall_api/djmall_auth_api/djmall_auth_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/djmall_service/djmall_auth_provider/djmall_auth_provider.iml" filepath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/djmall_auth_provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/djmall_service/djmall_mapper/djmall_mapper.iml" filepath="$PROJECT_DIR$/djmall_service/djmall_mapper/djmall_mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/djmall_model/djmall_model.iml" filepath="$PROJECT_DIR$/djmall_model/djmall_model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/djmall_service/djmall_pojo/djmall_pojo.iml" filepath="$PROJECT_DIR$/djmall_service/djmall_pojo/djmall_pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/djmall_service/djmall_service.iml" filepath="$PROJECT_DIR$/djmall_service/djmall_service.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="djmall_mapper" />
+        <module name="djmall_auth_api" />
+        <module name="djmall_auth_provider" />
+        <module name="djmall_admin" />
+        <module name="djmall_pojo" />
+        <module name="djmall_model" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="djmall" target="1.8" />
+      <module name="djmall_admin" target="1.8" />
+      <module name="djmall_api" target="1.8" />
+      <module name="djmall_auth_api" target="1.8" />
+      <module name="djmall_auth_provider" target="1.8" />
+      <module name="djmall_mapper" target="1.8" />
+      <module name="djmall_model" target="1.8" />
+      <module name="djmall_pojo" target="1.8" />
+      <module name="djmall_service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="djmall" options="-parameters" />
+      <module name="djmall_admin" options="-parameters" />
+      <module name="djmall_api" options="" />
+      <module name="djmall_auth_api" options="-parameters" />
+      <module name="djmall_auth_provider" options="-parameters" />
+      <module name="djmall_mapper" options="-parameters" />
+      <module name="djmall_model" options="-parameters" />
+      <module name="djmall_pojo" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="djmall_admin:war">
+    <output-path>$PROJECT_DIR$/djmall_admin/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>djmall_admin</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="djmall_admin-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="djmall_admin:war exploded" />
+    </root>
+  </artifact>
+</component>

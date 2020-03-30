@@ -42,4 +42,9 @@ public class ResourceDtoResp implements Serializable {
      * 资源编码
      */
     private String resourceCode;
+
+    /**
+     * 展开节点
+     */
+    private boolean open;
 }

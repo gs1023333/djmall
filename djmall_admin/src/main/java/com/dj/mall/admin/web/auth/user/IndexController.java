@@ -25,6 +25,9 @@ public class IndexController {
         UserDtoResp userDtoResp = DozerUtil.map(user, UserDtoResp.class);
         List<ResourceDtoResp> authList = userDtoResp.getAuthList();
         List<ResourceVoResp> respList = DozerUtil.mapList(authList, ResourceVoResp.class);
+        for (ResourceVoResp resourceVoResp : respList) {
+            resourceVoResp.setOpen(true);
+        }
         return new ResultModel<>().success(respList);
     }
 }

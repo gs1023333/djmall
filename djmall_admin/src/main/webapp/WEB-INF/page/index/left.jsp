@@ -42,28 +42,10 @@
 
 		$(document).ready(function(){
 			show();
-			openAllTreenode();
 		});
 		$(function(){
 			show();
 		});
-		/*function openAllTreenode(){
-
-			// 获取树对象
-			var treeObj = $.fn.zTree.getZTreeObj("ztree");
-			/!* 获取所有树节点 *!/
-			var nodes = treeObj.transformToArray(treeObj.getNodes());
-			// 展开除第一级之外的其他节点
-			for (var i = 0, length_1 = nodes.length; i < length_1; i++) {
-				if(nodes[i].level == 0){
-					continue;
-				}
-				nodes[i].open = true;
-			}
-			//展开第一级节点
-			treeObj.expandNode(nodes[0], true);
-
-		}*/
 		function show(){
 			$.post(
 					"<%=request.getContextPath()%>/auth/index/show",

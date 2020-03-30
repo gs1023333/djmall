@@ -34,7 +34,11 @@ public class ResourceApiImpl extends ServiceImpl<ResourceMapper, ResourceEntity>
         QueryWrapper<ResourceEntity> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("is_del", SystemConstant.IS_NOT_DEL);
         List<ResourceEntity> list = this.list(queryWrapper);
-        return DozerUtil.mapList(list, ResourceDtoResp.class);
+        List<ResourceDtoResp> resourceDtoRespList = DozerUtil.mapList(list, ResourceDtoResp.class);
+        for (ResourceDtoResp resourceDtoResp : resourceDtoRespList) {
+            resourceDtoResp.setOpen(true);
+        }
+        return resourceDtoRespList;
     }
 
     /**

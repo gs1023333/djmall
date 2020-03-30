@@ -8,6 +8,6 @@
         from djmall_auth_user_role aur
             LEFT JOIN djmall_auth_role_resource arr ON aur.role_id = arr.role_id
             LEFT JOIN djmall_auth_resource ar ON arr.resource_id = ar.id
-        where aur.user_id = #{userId}
+        where aur.user_id = #{userId} and ar.type = '菜单'
     </select>
 </mapper>

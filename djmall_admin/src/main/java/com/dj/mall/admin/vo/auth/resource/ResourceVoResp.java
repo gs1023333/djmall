@@ -53,4 +53,9 @@ public class ResourceVoResp implements Serializable {
      * 用户权限集合
      */
     private List<ResourceDtoResp> authList;
+
+    /**
+     * 展开节点
+     */
+    private boolean open;
 }

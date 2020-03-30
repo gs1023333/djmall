@@ -1,6 +1,6 @@
 package com.dj.mall.admin.web.auth.user;
 
-import com.dj.mall.admin.vo.auth.user.UserVoResp;
+import com.dj.mall.admin.vo.auth.resource.ResourceVoResp;
 import com.dj.mall.model.base.ResultModel;
 import com.dj.mall.model.dto.auth.resource.ResourceDtoResp;
 import com.dj.mall.model.dto.auth.user.UserDtoResp;
@@ -21,9 +21,10 @@ public class IndexController {
 
     @RequestMapping("show")
     public ResultModel<Object> show(HttpSession session) {
-        UserDtoResp userDtoResp = (UserDtoResp) session.getAttribute("user");
+        Object user = session.getAttribute("user");
+        UserDtoResp userDtoResp = DozerUtil.map(user, UserDtoResp.class);
         List<ResourceDtoResp> authList = userDtoResp.getAuthList();
-        List<UserVoResp> respList = DozerUtil.mapList(authList, UserVoResp.class);
+        List<ResourceVoResp> respList = DozerUtil.mapList(authList, ResourceVoResp.class);
         return new ResultModel<>().success(respList);
     }
 }

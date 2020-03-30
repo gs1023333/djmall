@@ -90,4 +90,9 @@ public class UserVoReq implements Serializable {
      * 用户删除状态 1:正常,0:删除
      */
     private Integer isDel;
+
+    /**
+     * 角色ID
+     */
+    private Integer roleId;
 }

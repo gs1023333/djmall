@@ -75,7 +75,7 @@ public class ShiroRelam extends AuthorizingRealm {
             UserVoResp userVoResp = DozerUtil.map(userDtoResp, UserVoResp.class);
             userVoResp.setEndTime(new Date());
             userApi.updateUserByUserId(DozerUtil.map(userVoResp, UserDtoReq.class));
-            session.setAttribute("user", userVoResp);
+            session.setAttribute("user", userDtoResp);
             return new SimpleAuthenticationInfo(userName, password, getName());
         } catch (Exception e) {
             throw new AccountException(e.getMessage());

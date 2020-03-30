@@ -1,9 +1,11 @@
 package com.dj.mall.model.dto.auth.user;
 
+import com.dj.mall.model.dto.auth.resource.ResourceDtoResp;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @Written by : GSSS
@@ -89,4 +91,13 @@ public class UserDtoReq implements Serializable {
      * 用户删除状态 1:正常,0:删除
      */
     private Integer isDel;
+
+    /**
+     * 用户权限集合
+     */
+    private List<ResourceDtoResp> authList;
+    /**
+     * 角色ID
+     */
+    private Integer roleId;
 }

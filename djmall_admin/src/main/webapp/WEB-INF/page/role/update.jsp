@@ -19,7 +19,7 @@
 	function update() {
 		var index = layer.load(1); //换了种风格
 		$.post(
-				"<%=request.getContextPath()%>/role/update",
+				"<%=request.getContextPath()%>/auth/role/update",
 				$("#fm").serialize(),
 					function(data){
 						if (data.code != "200") {
@@ -30,7 +30,7 @@
 						} 
 						layer.msg(data.msg, {icon: 6, time: 1000}, function(){
 							layer.close(index); 
-							parent.window.location.href="<%=request.getContextPath()%>/role/toShow";
+							parent.window.location.href="<%=request.getContextPath()%>/auth/role/toShow";
 						})
 				}); 		
 	}
@@ -46,7 +46,7 @@
 	    </div>
 	    </div>
 	    
-		<input type = "hidden" name = "id" value = "${r.id}"/>
+		<input type = "hidden" name = "roleId" value = "${r.roleId}"/>
 		 
 		<div class="layui-form-label" >
 		<input type = "button" class="layui-btn layui-btn-radius layui-btn-normal"  value = "修改" onclick="update()"/>

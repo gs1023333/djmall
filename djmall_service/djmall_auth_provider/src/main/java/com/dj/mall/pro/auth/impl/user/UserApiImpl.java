@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.dj.mall.api.auth.user.UserApi;
 import com.dj.mall.entity.auth.resource.ResourceEntity;
 import com.dj.mall.entity.auth.user.UserEntity;
+import com.dj.mall.entity.auth.user.UserRoleEntity;
 import com.dj.mall.mapper.auth.user.UserMapper;
 import com.dj.mall.model.base.BusinessException;
 import com.dj.mall.model.base.SystemConstant;
@@ -14,7 +15,10 @@ import com.dj.mall.model.dto.auth.resource.ResourceDtoResp;
 import com.dj.mall.model.dto.auth.user.UserDtoReq;
 import com.dj.mall.model.dto.auth.user.UserDtoResp;
 import com.dj.mall.model.util.DozerUtil;
+import com.dj.mall.pro.auth.service.user.UserRoleService;
+import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -24,6 +28,8 @@ import java.util.List;
 @Service
 public class UserApiImpl extends ServiceImpl<UserMapper, UserEntity> implements UserApi {
 
+    @Autowired
+    private UserRoleService userRoleService;
     /**
      * 功能描述: 根据用户ID获取用户信息
      *
@@ -129,7 +135,14 @@ public class UserApiImpl extends ServiceImpl<UserMapper, UserEntity> implements 
      */
     @Override
     public void addUser(UserDtoReq userDtoReq) throws Exception {
+        userDtoReq.setCreateTime(new Date());
         this.save(DozerUtil.map(userDtoReq, UserEntity.class));
+        QueryWrapper<UserEntity> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("user_name", userDtoReq.getUserName());
+        UserEntity userEntity = this.getOne(queryWrapper);
+        UserRoleEntity userRoleEntity = new UserRoleEntity();
+        userRoleEntity.setUserId(userEntity.getId()).setRoleId(userDtoReq.getUserLevel());
+        userRoleService.save(userRoleEntity);
     }
 
     /**
@@ -246,4 +259,5 @@ public class UserApiImpl extends ServiceImpl<UserMapper, UserEntity> implements 
         }
         return DozerUtil.map(userEntity, UserDtoResp.class);
     }
+
 }

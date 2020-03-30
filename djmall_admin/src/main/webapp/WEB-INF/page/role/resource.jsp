@@ -21,6 +21,7 @@
             data: {
                 simpleData: {
                     enable: true,
+                    idKey:"resourceId",
                     pIdKey: "parentId"
                 },
                 key: {
@@ -39,8 +40,8 @@
         });
         function show(){
             $.post(
-                "<%=request.getContextPath()%>/role/showResource",
-                {"roleId":"${id}"},
+                "<%=request.getContextPath()%>/auth/role/showResource",
+                {"roleId":"${roleId}"},
                 function (data){
                     $.fn.zTree.init($("#resourceTree"), setting, data.data);
                 })
@@ -52,17 +53,17 @@
             var ids = new Array();
             if (nodes != null) {
                 for (var i = 0; i < nodes.length; i++) {
-                    ids.push(nodes[i].id);
+                    ids.push(nodes[i].resourceId);
                 }
             }
         var index = layer.load(1);
         $.post(
-            "<%=request.getContextPath()%>/role/relatedResource",
-            nodes != null ? {roleId:"${id}", resourceIds:ids} : {roleId:"${id}"},
+            "<%=request.getContextPath()%>/auth/role/relatedResource",
+            nodes != null ? {roleId:"${roleId}", resourceIds:ids} : {roleId:"${roleId}"},
             function (data) {
                 layer.msg(data.msg, {time:1000}, function () {
                     layer.close(index);
-                    window.location.href = '<%=request.getContextPath()%>/role/toShowResource?id='+${id};
+                    window.location.href = '<%=request.getContextPath()%>/auth/role/toShowResource?roleId='+${roleId};
                 })
             }
         );
@@ -71,7 +72,7 @@
 </head>
 <body>
 <form id="fm">
-    <input type="hidden" value="${id}" name="roleId">
+    <input type="hidden" value="${roleId}" name="roleId">
     <input type="button" onclick="relatedResource()" value="保存">
     <div id="resourceTree" class="ztree"></div>
 </form>

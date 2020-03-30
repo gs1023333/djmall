@@ -18,10 +18,10 @@
 	function search(){
 		var index = layer.load(1); //换了种风格
 		$.post(
-				"<%=request.getContextPath()%>/role/show",
+				"<%=request.getContextPath()%>/auth/role/show",
 				$("#fm").serialize(),
 				function(data){
-					if (data.code == "-1") {
+					if (data.code != "200") {
 						layer.msg(data.msg, {icon: 5, time: 1000}, function(){
 							layer.close(index); 
 						});
@@ -32,10 +32,10 @@
 					for (var i = 0; i < data.data.data.length; i++) {
 						var role = data.data.data[i];
 						html += "<tr>"
-						html += "<th>"+role.id+"</th>"
+						html += "<th>"+role.roleId+"</th>"
 						html += "<th>"+role.roleName+"</th>"
 						html += "<th>"
-						html += "<a onclick='toShowResource("+role.id+")'>关联资源</a> | <a onclick='update("+role.id+")'>编辑</a> | <a onclick='del("+role.id+")'>删除</a> "
+						html += "<a onclick='toShowResource("+role.roleId+")'>关联资源</a> | <a onclick='update("+role.roleId+")'>编辑</a> | <a onclick='del("+role.roleId+")'>删除</a> "
 						html += "</th>"
 						html += "</tr>"
 					}
@@ -43,33 +43,33 @@
 
 				})
 	}
-	function update(id) {
+	function update(roleId) {
 		layer.open({
 			type: 2,
 			title: '修改信息',
 			shadeClose: true,
 			shade: 0.38,
 			area: ['480px', '90%'],
-			content: '<%=request.getContextPath()%>/role/toUpdate?id='+id
+			content: '<%=request.getContextPath()%>/auth/role/toUpdate?roleId='+roleId
 		});
 	}
-	function toShowResource(id) {
+	function toShowResource(roleId) {
 		layer.open({
 			type: 2,
 			title: '关联资源',
 			shadeClose: true,
 			shade: 0.38,
 			area: ['480px', '90%'],
-			content: '<%=request.getContextPath()%>/role/toShowResource?id='+id
+			content: '<%=request.getContextPath()%>/auth/role/toShowResource?roleId='+roleId
 		});
 	}
 
-	function del(id) {
+	function del(roleId) {
 		var index = layer.load(1); //换了种风格
 		layer.confirm('是否删除该角色?', function(index){
 			$.post(
-					"<%=request.getContextPath()%>/role/del",
-					{"id":id, "isDel":0},
+					"<%=request.getContextPath()%>/auth/role/del",
+					{"roleId":roleId},
 					function(data){
 						if (data.code != "200") {
 							layer.msg(data.msg, {icon: 5, time: 1000}, function(){
@@ -92,7 +92,7 @@
 			shadeClose: true,
 			shade: 0.38,
 			area: ['480px', '90%'],
-			content: '<%=request.getContextPath()%>/role/toAdd'
+			content: '<%=request.getContextPath()%>/auth/role/toAdd'
 		});
 	}
 </script>

@@ -26,7 +26,7 @@
 					minlength:2,
 					remote: {//ajax验证。server result:{"valid",true or false} 向服务发送当前input name值，获得一个json数据。例表示正确：{"valid",true}
 	                    type: 'POST',
-	                    url: "<%=request.getContextPath()%>/role/findByName",
+	                    url: "<%=request.getContextPath()%>/auth/role/findByName",
 	                    data:{
 							roleName:function() {
 	                    		return $("#roleName").val();
@@ -57,7 +57,7 @@
 		submitHandler: function() {
 			var index = layer.load(1); //换了种风格
 			$.post(
-					"<%=request.getContextPath()%>/role/add",
+					"<%=request.getContextPath()%>/auth/role/add",
 					$("#fm").serialize(),
 					function(data){
 						if (data.code != "200") {
@@ -68,7 +68,7 @@
 						} 
 						layer.msg(data.msg, {icon: 6, time: 1000}, function(){
 							layer.close(index); 
-							parent.window.location.href="<%=request.getContextPath()%>/role/toShow";
+							parent.window.location.href="<%=request.getContextPath()%>/auth/role/toShow";
 						})
 					})
     	}

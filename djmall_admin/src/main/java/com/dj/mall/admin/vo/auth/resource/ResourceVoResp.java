@@ -1,8 +1,10 @@
 package com.dj.mall.admin.vo.auth.resource;
 
+import com.dj.mall.model.dto.auth.resource.ResourceDtoResp;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @Written by : GSSS
@@ -42,4 +44,13 @@ public class ResourceVoResp implements Serializable {
      * 资源编码
      */
     private String resourceCode;
+
+    /**
+     * 默认选中
+     */
+    private boolean checked;
+    /**
+     * 用户权限集合
+     */
+    private List<ResourceDtoResp> authList;
 }

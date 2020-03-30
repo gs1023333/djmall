@@ -113,7 +113,8 @@ public class UserController {
                     + "如果您没有注册，请忽略此邮件";
             JavaEmailUtils.sendEmail(userVoReq.getUserEmail(), "商户激活", content);
         }
-        userApi.addUser(DozerUtil.map(userVoReq, UserDtoReq.class));
+        UserDtoReq userDtoReq = DozerUtil.map(userVoReq, UserDtoReq.class);
+        userApi.addUser(userDtoReq);
         return new ResultModel<>().success(true);
     }
 

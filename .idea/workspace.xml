@@ -1,7 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="938decb7-6bbf-4504-9c29-42f515e56f7e" name="Default Changelist" comment="" />
+    <list default="true" id="938decb7-6bbf-4504-9c29-42f515e56f7e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/djmall_admin_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/djmall_admin_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/djmall_admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/djmall_admin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/src/main/java/com/dj/mall/admin/config/ShiroRelam.java" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/src/main/java/com/dj/mall/admin/config/ShiroRelam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/src/main/java/com/dj/mall/admin/vo/auth/resource/ResourceVoResp.java" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/src/main/java/com/dj/mall/admin/vo/auth/resource/ResourceVoResp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/src/main/java/com/dj/mall/admin/vo/auth/user/UserVoReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/src/main/java/com/dj/mall/admin/vo/auth/user/UserVoReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/src/main/java/com/dj/mall/admin/web/auth/role/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/src/main/java/com/dj/mall/admin/web/auth/role/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/src/main/java/com/dj/mall/admin/web/auth/role/RolePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/src/main/java/com/dj/mall/admin/web/auth/role/RolePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/src/main/java/com/dj/mall/admin/web/auth/user/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/src/main/java/com/dj/mall/admin/web/auth/user/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/src/main/java/com/dj/mall/admin/web/auth/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/src/main/java/com/dj/mall/admin/web/auth/user/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/src/main/webapp/WEB-INF/page/index/left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/src/main/webapp/WEB-INF/page/index/left.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/src/main/webapp/WEB-INF/page/role/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/src/main/webapp/WEB-INF/page/role/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/src/main/webapp/WEB-INF/page/role/resource.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/src/main/webapp/WEB-INF/page/role/resource.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/src/main/webapp/WEB-INF/page/role/show.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/src/main/webapp/WEB-INF/page/role/show.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/src/main/webapp/WEB-INF/page/role/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/src/main/webapp/WEB-INF/page/role/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/target/classes/com/dj/mall/admin/config/ShiroRelam.class" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/target/classes/com/dj/mall/admin/config/ShiroRelam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/target/classes/com/dj/mall/admin/vo/auth/resource/ResourceVoResp.class" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/target/classes/com/dj/mall/admin/vo/auth/resource/ResourceVoResp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/target/classes/com/dj/mall/admin/vo/auth/user/UserVoReq.class" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/target/classes/com/dj/mall/admin/vo/auth/user/UserVoReq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/target/classes/com/dj/mall/admin/web/auth/role/RoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/target/classes/com/dj/mall/admin/web/auth/role/RoleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/target/classes/com/dj/mall/admin/web/auth/role/RolePageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/target/classes/com/dj/mall/admin/web/auth/role/RolePageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/target/classes/com/dj/mall/admin/web/auth/user/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/target/classes/com/dj/mall/admin/web/auth/user/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_admin/target/classes/com/dj/mall/admin/web/auth/user/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_admin/target/classes/com/dj/mall/admin/web/auth/user/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_api/djmall_auth_api/src/main/java/com/dj/mall/api/auth/role/RoleApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_api/djmall_auth_api/src/main/java/com/dj/mall/api/auth/role/RoleApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_api/djmall_auth_api/target/classes/com/dj/mall/api/auth/role/RoleApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_api/djmall_auth_api/target/classes/com/dj/mall/api/auth/role/RoleApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_api/djmall_auth_api/target/classes/com/dj/mall/api/auth/user/UserApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_api/djmall_auth_api/target/classes/com/dj/mall/api/auth/user/UserApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_model/src/main/java/com/dj/mall/model/dto/auth/user/UserDtoReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_model/src/main/java/com/dj/mall/model/dto/auth/user/UserDtoReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_model/target/classes/com/dj/mall/model/dto/auth/user/UserDtoReq.class" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_model/target/classes/com/dj/mall/model/dto/auth/user/UserDtoReq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/src/main/java/com/dj/mall/pro/auth/impl/role/RoleApiImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/src/main/java/com/dj/mall/pro/auth/impl/role/RoleApiImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/src/main/java/com/dj/mall/pro/auth/impl/user/UserApiImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/src/main/java/com/dj/mall/pro/auth/impl/user/UserApiImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/src/main/java/com/dj/mall/pro/auth/service/role/RoleResourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/src/main/java/com/dj/mall/pro/auth/service/role/RoleResourceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/src/main/java/com/dj/mall/pro/auth/service/role/impl/RoleResourceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/src/main/java/com/dj/mall/pro/auth/service/role/impl/RoleResourceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/src/main/java/com/dj/mall/pro/auth/service/user/UserRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/src/main/java/com/dj/mall/pro/auth/service/user/UserRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/src/main/java/com/dj/mall/pro/auth/service/user/impl/UserRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/src/main/java/com/dj/mall/pro/auth/service/user/impl/UserRoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/target/classes/com/dj/mall/pro/auth/impl/role/RoleApiImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/target/classes/com/dj/mall/pro/auth/impl/role/RoleApiImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/target/classes/com/dj/mall/pro/auth/impl/user/UserApiImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/target/classes/com/dj/mall/pro/auth/impl/user/UserApiImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/target/classes/com/dj/mall/pro/auth/service/role/RoleResourceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/target/classes/com/dj/mall/pro/auth/service/role/RoleResourceService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/target/classes/com/dj/mall/pro/auth/service/role/impl/RoleResourceServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/target/classes/com/dj/mall/pro/auth/service/role/impl/RoleResourceServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/target/classes/com/dj/mall/pro/auth/service/user/UserRoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/target/classes/com/dj/mall/pro/auth/service/user/UserRoleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/target/classes/com/dj/mall/pro/auth/service/user/impl/UserRoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/djmall_service/djmall_auth_provider/target/classes/com/dj/mall/pro/auth/service/user/impl/UserRoleServiceImpl.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +53,9 @@
   </component>
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="djmall" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -58,7 +102,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -161,6 +205,7 @@
       <workItem from="1585319254097" duration="3434000" />
       <workItem from="1585370770991" duration="8667000" />
       <workItem from="1585459946168" duration="33132000" />
+      <workItem from="1585542462735" duration="17825000" />
     </task>
     <task id="LOCAL-00001" summary="djmall">
       <created>1585503452848</created>
@@ -180,6 +225,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="djmall" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="361" y="74" key="#Inspections" timestamp="1585545548766">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1585545548766" />
     <state x="361" y="74" key="#Project_Structure" timestamp="1585500018306">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -192,10 +241,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585291841921" />
-    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1585497710826">
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1585561163033">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1585497710826" />
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1585561163033" />
     <state x="485" y="328" key="#com.intellij.javaee.module.view.common.J2EE.J2EEDeploymentDescriptorLocationPanel.changeDDPath" timestamp="1585045520963">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -212,85 +261,85 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1585042028279" />
-    <state x="225" y="10" key="CommitChangelistDialog2" timestamp="1585503527494">
+    <state x="225" y="10" key="CommitChangelistDialog2" timestamp="1585503587552">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="225" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585503527494" />
+    <state x="225" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585503587552" />
     <state x="549" y="156" key="FileChooserDialogImpl" timestamp="1585502456413">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="156" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585502456413" />
-    <state width="1024" height="220" key="GridCell.Tab.0.bottom" timestamp="1585503342494">
+    <state width="1024" height="182" key="GridCell.Tab.0.bottom" timestamp="1585562554900">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="220" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585503342494" />
-    <state width="1024" height="220" key="GridCell.Tab.0.center" timestamp="1585503342494">
+    <state width="1024" height="182" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585562554900" />
+    <state width="1024" height="182" key="GridCell.Tab.0.center" timestamp="1585562554900">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="220" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585503342494" />
-    <state width="1024" height="220" key="GridCell.Tab.0.left" timestamp="1585503342494">
+    <state width="1024" height="182" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585562554900" />
+    <state width="1024" height="182" key="GridCell.Tab.0.left" timestamp="1585562554900">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="220" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585503342494" />
-    <state width="1024" height="220" key="GridCell.Tab.0.right" timestamp="1585503342494">
+    <state width="1024" height="182" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585562554900" />
+    <state width="1024" height="182" key="GridCell.Tab.0.right" timestamp="1585562554900">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="220" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585503342494" />
-    <state width="1024" height="220" key="GridCell.Tab.1.bottom" timestamp="1585503342494">
+    <state width="1024" height="182" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585562554900" />
+    <state width="1024" height="182" key="GridCell.Tab.1.bottom" timestamp="1585562554900">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="220" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585503342494" />
-    <state width="1024" height="220" key="GridCell.Tab.1.center" timestamp="1585503342494">
+    <state width="1024" height="182" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585562554900" />
+    <state width="1024" height="182" key="GridCell.Tab.1.center" timestamp="1585562554900">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="220" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1585503342494" />
-    <state width="1024" height="220" key="GridCell.Tab.1.left" timestamp="1585503342494">
+    <state width="1024" height="182" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1585562554900" />
+    <state width="1024" height="182" key="GridCell.Tab.1.left" timestamp="1585562554900">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="220" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1585503342494" />
-    <state width="1024" height="220" key="GridCell.Tab.1.right" timestamp="1585503342494">
+    <state width="1024" height="182" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1585562554900" />
+    <state width="1024" height="182" key="GridCell.Tab.1.right" timestamp="1585562554900">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="220" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585503342494" />
-    <state width="1024" height="220" key="GridCell.Tab.2.bottom" timestamp="1585503342494">
+    <state width="1024" height="182" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585562554900" />
+    <state width="1024" height="182" key="GridCell.Tab.2.bottom" timestamp="1585562554900">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="220" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585503342494" />
-    <state width="1024" height="220" key="GridCell.Tab.2.center" timestamp="1585503342494">
+    <state width="1024" height="182" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585562554900" />
+    <state width="1024" height="182" key="GridCell.Tab.2.center" timestamp="1585562554900">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="220" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1585503342494" />
-    <state width="1024" height="220" key="GridCell.Tab.2.left" timestamp="1585503342494">
+    <state width="1024" height="182" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1585562554900" />
+    <state width="1024" height="182" key="GridCell.Tab.2.left" timestamp="1585562554900">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="220" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1585503342494" />
-    <state width="1024" height="220" key="GridCell.Tab.2.right" timestamp="1585503342494">
+    <state width="1024" height="182" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1585562554900" />
+    <state width="1024" height="182" key="GridCell.Tab.2.right" timestamp="1585562554900">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="220" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1585503342494" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1585494712889">
+    <state width="1024" height="182" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1585562554900" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1585550261492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585494712889" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1585503538028">
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585550261492" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1585503597151">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585503538028" />
-    <state x="461" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1585459946783">
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585503597151" />
+    <state x="461" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1585542471262">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="461" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585459946783" />
+    <state x="461" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585542471262" />
     <state x="178" y="120" key="new project wizard" timestamp="1585045458112">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="178" y="120" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1585045458112" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1585318829570">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1585556626429">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1585318829570" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1585464086720">
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1585556626429" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1585544118646">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1585464086720" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1585544118646" />
   </component>
 </project>

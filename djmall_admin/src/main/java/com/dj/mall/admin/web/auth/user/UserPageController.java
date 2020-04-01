@@ -2,9 +2,11 @@ package com.dj.mall.admin.web.auth.user;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.dj.mall.admin.vo.auth.role.RoleVoResp;
+import com.dj.mall.admin.vo.auth.user.UserVoResp;
 import com.dj.mall.api.auth.role.RoleApi;
 import com.dj.mall.api.auth.user.UserApi;
 import com.dj.mall.model.dto.auth.role.RoleDtoResp;
+import com.dj.mall.model.dto.auth.user.UserDtoResp;
 import com.dj.mall.model.util.DozerUtil;
 import com.dj.mall.model.util.PasswordSecurityUtil;
 import org.springframework.stereotype.Controller;
@@ -56,5 +58,35 @@ public class UserPageController {
         String salt = PasswordSecurityUtil.generateSalt();
         model.addAttribute("salt", salt);
         return "/user/find_pwd";
+    }
+
+    @RequestMapping("toShow")
+    public String toShow(Model model) throws Exception {
+        List<RoleDtoResp> list = roleApi.getList();
+        model.addAttribute("list", DozerUtil.mapList(list, RoleVoResp.class));
+        return "/user/show";
+    }
+    @RequestMapping("toUpdate")
+    public String toUpdate(Integer userId, Model model) throws Exception {
+        UserDtoResp userDtoResp = userApi.getUser(userId);
+        model.addAttribute("u", DozerUtil.map(userDtoResp, UserVoResp.class));
+        return "/user/update";
+    }
+    @RequestMapping("toUpdatePwd")
+    public String toUpdatePwd(String userName, Model model) throws Exception {
+        UserDtoResp userDtoResp = userApi.getSalt(userName);
+        model.addAttribute("userId", userDtoResp.getUserId());
+        String salt = PasswordSecurityUtil.generateSalt();
+        model.addAttribute("salt", salt);
+        return "/user/update_pwd";
+    }
+
+    @RequestMapping("toAuthorization")
+    public String toAuthorization(Integer userId, Model model) throws Exception {
+        List<RoleDtoResp> list = roleApi.getList();
+        model.addAttribute("list", DozerUtil.mapList(list, RoleVoResp.class));
+        UserDtoResp userDtoResp = userApi.getUser(userId);
+        model.addAttribute("u", DozerUtil.map(userDtoResp, UserVoResp.class));
+        return "/user/shouquan";
     }
 }

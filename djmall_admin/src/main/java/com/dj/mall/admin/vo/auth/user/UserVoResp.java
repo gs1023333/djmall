@@ -1,6 +1,8 @@
 package com.dj.mall.admin.vo.auth.user;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -58,11 +60,15 @@ public class UserVoResp implements Serializable {
     /**
      * 用户注册时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    @DateTimeFormat(pattern = "yyy-MM-dd HH:mm:ss")
     private Date createTime;
 
     /**
      * 用户最后登录时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    @DateTimeFormat(pattern = "yyy-MM-dd HH:mm:ss")
     private Date endTime;
 
     /**

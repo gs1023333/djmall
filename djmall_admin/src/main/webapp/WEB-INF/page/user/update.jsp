@@ -6,20 +6,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>小页面</title>
-<script type="text/javascript" src="<%=request.getContextPath()%>/static/layer-v3.1.1/layer/layer.js" charset="utf-8"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/static/layui-v2.5.5/layui/layui.js" charset="utf-8"></script>
-<link rel="stylesheet" href="<%=request.getContextPath()%>/static/layui-v2.5.5/layui/css/layui.css"  media="all">
-<script type="text/javascript" src="<%=request.getContextPath()%>/static/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/static/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/static/layer-v3.1.1/layer/layer.js" charset="utf-8"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/static/layui-v2.5.5/layui/layui.js" charset="utf-8"></script>
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/static/layui-v2.5.5/layui/css/layui.css"  media="all">
 <script type="text/javascript">
 	layui.use('form', function(){
-	    var form = layui.form(); 
+	    var form = layui.form;
 	    form.render();
 	});
 
 	function update() {
 		var index = layer.load(1); //换了种风格
 		$.post(
-				"<%=request.getContextPath()%>/user/update",
+				"<%=request.getContextPath()%>/auth/user/update",
 				$("#fm").serialize(),
 					function(data){
 						if (data.code != "200") {
@@ -30,7 +30,7 @@
 						} 
 						layer.msg(data.msg, {icon: 6, time: 1000}, function(){
 							layer.close(index); 
-							parent.window.location.href="<%=request.getContextPath()%>/user/toShow";
+							parent.window.location.href="<%=request.getContextPath()%>/auth/user/toShow";
 						})
 				}); 		
 	}
@@ -71,7 +71,7 @@
 	   	</div>
 	 	</div>
 		  
-		<input type = "hidden" name = "id" value = "${u.id}"/>
+		<input type = "hidden" name = "userId" value = "${u.userId}"/>
 		 
 		<div class="layui-form-label" >
 		<input type = "button" class="layui-btn layui-btn-radius layui-btn-normal"  value = "修改" onclick="update()"/>

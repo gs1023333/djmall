@@ -67,13 +67,14 @@ public class ShiroConfiguration {
         filters.put("/auth/user/findByName", "anon");
         filters.put("/auth/user/findByEmail", "anon");
         filters.put("/auth/user/findByPhone", "anon");
-        filters.put("/auth/user/updateUser", "anon");
+        filters.put("/auth/user/update", "anon");
         filters.put("/auth/user/updateUserStatusByUserName", "anon");
         filters.put("/auth/user/toFindPwd", "anon");
         filters.put("/auth/user/findOneByPhone", "anon");
         filters.put("/auth/user/findByPhoneAndCode", "anon");
         filters.put("/auth/user/verify", "anon");
         filters.put("/auth/user/findPwd", "anon");
+        filters.put("/auth/user/toUpdatePwd", "anon");
 
         // authc 表示必须认证才可访问
         filters.put("/**", "authc");

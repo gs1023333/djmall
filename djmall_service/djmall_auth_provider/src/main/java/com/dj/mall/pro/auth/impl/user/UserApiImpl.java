@@ -17,6 +17,7 @@ import com.dj.mall.model.dto.auth.user.UserDtoResp;
 import com.dj.mall.model.util.DozerUtil;
 import com.dj.mall.pro.auth.service.user.UserRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 
 import java.util.Date;
 import java.util.List;
@@ -55,7 +56,24 @@ public class UserApiImpl extends ServiceImpl<UserMapper, UserEntity> implements 
      */
     @Override
     public List<UserDtoResp> queryUser(UserDtoReq userDtoReq) throws Exception {
-        return DozerUtil.mapList(this.list(), UserDtoResp.class);
+        QueryWrapper<UserEntity> queryWrapper = new QueryWrapper<>();
+        if (!StringUtils.isEmpty(userDtoReq.getUserName())) {
+            queryWrapper.or(i -> i.like("user_name", userDtoReq.getUserName())
+                    .or().like("user_phone", userDtoReq.getUserName())
+                    .or().like("user_email", userDtoReq.getUserName()));
+        }
+        queryWrapper.orderByDesc("id").eq("is_del", SystemConstant.IS_NOT_DEL);
+        if (!userDtoReq.getStatus().equals(SystemConstant.STATUS)) {
+            queryWrapper.eq("status", userDtoReq.getStatus());
+        }
+        if (!StringUtils.isEmpty(userDtoReq.getUserLevel())) {
+            queryWrapper.eq("user_level", userDtoReq.getUserLevel());
+        }
+        if (!StringUtils.isEmpty(userDtoReq.getUserSex())) {
+            queryWrapper.eq("user_sex", userDtoReq.getUserSex());
+        }
+        List<UserDtoResp> userDtoRespList = DozerUtil.mapList(this.list(queryWrapper), UserDtoResp.class);
+        return userDtoRespList;
     }
 
     /**
@@ -260,4 +278,22 @@ public class UserApiImpl extends ServiceImpl<UserMapper, UserEntity> implements 
         return DozerUtil.map(userEntity, UserDtoResp.class);
     }
 
+    /**
+     * 功能描述: 激活用户
+     *
+     * @param userId
+     * @params: * @param null
+     * @return:
+     * @author: gsss
+     * @date: 2020-3-31 下午 02:09
+     */
+    @Override
+    public void active(Integer userId) throws Exception, BusinessException {
+        UserEntity userEntity = this.getById(userId);
+        if (userEntity.getStatus().equals(SystemConstant.STATUS_OK)) {
+            throw new BusinessException("该用户已激活!");
+        }
+        userEntity.setStatus(SystemConstant.STATUS_OK);
+        this.updateById(userEntity);
+    }
 }

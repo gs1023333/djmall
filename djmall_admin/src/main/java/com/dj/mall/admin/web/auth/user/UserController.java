@@ -11,6 +11,7 @@ import com.dj.mall.model.dto.auth.user.UserDtoResp;
 import com.dj.mall.model.util.DozerUtil;
 import com.dj.mall.model.util.JavaEmailUtils;
 import com.dj.mall.model.util.MessageVerifyUtils;
+import com.dj.mall.model.util.PasswordSecurityUtil;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
@@ -20,9 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * @Written by : GSSS
@@ -40,15 +39,14 @@ public class UserController {
         return new ResultModel<>().success(DozerUtil.map(userDtoResp, UserVoResp.class));
     }
 
-    @GetMapping
-    public ResultModel<Object> queryUser(UserVoReq userVoReq) throws Exception {
-        UserDtoReq userDtoReq = DozerUtil.map(userVoReq, UserDtoReq.class);
-        List<UserDtoResp> userDtoRespList = userApi.queryUser(userDtoReq);
-        return new ResultModel<>().success(DozerUtil.mapList(userDtoRespList, UserVoResp.class));
-    }
-
     @RequestMapping("login")
     public ResultModel<Object> login(UserVoReq userVoReq, HttpSession session)  throws Exception {
+        //获取session
+        UserDtoResp userDtoResp = userApi.getByUserName(userVoReq.getUserName(), userVoReq.getPassword());
+        UserVoResp userVoResp = DozerUtil.map(userDtoResp, UserVoResp.class);
+        userVoResp.setEndTime(new Date());
+        userApi.updateUserByUserId(DozerUtil.map(userVoResp, UserDtoReq.class));
+        session.setAttribute("user", userDtoResp);
         // shiro登录方式
         Subject subject = SecurityUtils.getSubject();
         String userName = userVoReq.getUserName();
@@ -118,8 +116,8 @@ public class UserController {
         return new ResultModel<>().success(true);
     }
 
-    @RequestMapping("updateUser")
-    public ResultModel<Object> updateUser(UserVoReq userVoReq) throws Exception{
+    @RequestMapping("update")
+    public ResultModel<Object> update(UserVoReq userVoReq) throws Exception{
         userApi.updateUserByUserId(DozerUtil.map(userVoReq, UserDtoReq.class));
         return new ResultModel<>().success(true);
     }
@@ -160,4 +158,44 @@ public class UserController {
         JavaEmailUtils.sendEmail(userDtoResp.getUserEmail(), "修改密码", content);
         return new ResultModel<>().success(true);
     }
+    @RequestMapping("show")
+        public ResultModel<Object> show(UserVoReq userVoReq) throws Exception{
+            Map<String, Object> map = new HashMap<>();
+            List<UserDtoResp> userDtoRespList = userApi.queryUser(DozerUtil.map(userVoReq, UserDtoReq.class));
+            map.put("data", userDtoRespList);
+            return new ResultModel<>().success(map);
+    }
+    @RequestMapping("activate")
+    public ResultModel<Object> activate(Integer userId) throws Exception{
+        userApi.active(userId);
+        return new ResultModel<>().success(true);
+    }
+    @RequestMapping("del")
+    public ResultModel<Object> del(Integer userId) throws Exception{
+        UserDtoResp userDtoResp = userApi.getUser(userId);
+        userDtoResp.setIsDel(SystemConstant.IS_DEL);
+        userApi.updateUserByUserId(DozerUtil.map(userDtoResp, UserDtoReq.class));
+        return new ResultModel<>().success(true);
+    }
+    @RequestMapping("resetPassWord")
+    public ResultModel<Object> reset(Integer userId, HttpSession session) throws Exception{
+        UserDtoResp user = (UserDtoResp) session.getAttribute("user");
+        UserDtoResp userDtoResp = userApi.getUser(userId);
+        String newcode = String.valueOf(MessageVerifyUtils.getNewcode());
+        String salt = PasswordSecurityUtil.generateSalt();
+        String md5Pwd = PasswordSecurityUtil.enCode32(newcode);
+        String resetPwd = PasswordSecurityUtil.enCode32(md5Pwd + salt);
+        userDtoResp.setSalt(salt);
+        userDtoResp.setPassword(resetPwd);
+        userDtoResp.setResetPwd(resetPwd);
+        userApi.updateUserByUserId(DozerUtil.map(userDtoResp, UserDtoReq.class));
+        //想用户发送修改密码成功的邮件
+        String content = "尊敬的"+userDtoResp.getUserName()+"，您的密码已被管理员"+user.getUserName()+"，于"
+                +new Date()+"重置为"+newcode+"为了您的账户安全，请及时修改。" +
+                "<a href='http://localhost:8081/admin/auth/user/toLogin'>点我去登陆</a><br>"
+                ;
+        JavaEmailUtils.sendEmail(userDtoResp.getUserEmail(), "修改密码", content);
+        return new ResultModel<>().success(true);
+    }
+
 }

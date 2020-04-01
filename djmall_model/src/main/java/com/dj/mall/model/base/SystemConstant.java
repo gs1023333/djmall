@@ -35,6 +35,10 @@ public class SystemConstant {
 	 */
 	public static final Integer STATUS_ERROR = 0;
 	/**
+	 * 用户状态
+	 */
+	public static final Integer STATUS = -1;
+	/**
 	 * 用户已激活状态
 	 */
 	public static final Integer ACTIVATE = 1;

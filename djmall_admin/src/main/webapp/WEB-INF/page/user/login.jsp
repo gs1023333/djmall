@@ -54,6 +54,20 @@
                     $("#fm").serialize(),
                     function (data) {
                         if (data.code != "200") {
+                            if (data.msg == "300") {
+                                var userName = $("#userName").val();
+                                layer.confirm('该账户已被重置密码,须修改密码后进行登录,将跳转登录页面', function(index){
+                                    layer.open({
+                                        type: 2,
+                                        title: '修改密码',
+                                        shadeClose: true,
+                                        shade: 0.38,
+                                        area: ['480px', '90%'],
+                                        content: '<%=request.getContextPath()%>/auth/user/toUpdatePwd?userName='+userName
+                                    });
+                                });
+                            }
+                            return;
                             layer.msg(data.msg, {icon: 5, time: 1000}, function () {
                                 layer.close(index);
                             });

@@ -114,5 +114,12 @@ public interface UserApi{
      */
     UserDtoResp findByPhoneAndCode(String userPhone, String userCode) throws Exception;
 
-
+    /**
+     * 功能描述: 激活用户
+     * @params:  * @param null
+     * @return:
+     * @author: gsss
+     * @date: 2020-3-31 下午 02:09
+     */
+    void active(Integer userId) throws Exception, BusinessException;
 }
